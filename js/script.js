@@ -23,7 +23,11 @@ $('input[type="text"]').keypress(function(event) {
 
         // Create a new li and add to ul
         $('ul').append('<li>' + todoText + ' <span><i class="far fa-trash-alt"></i></span></li>')
-        
-        
+ 
     }
 })
+
+// Optional: add toggle todo icon 
+$('.fa-list-ul').click(function() {
+    $('input[type="text"]').fadeToggle();
+});
