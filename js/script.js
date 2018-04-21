@@ -10,3 +10,20 @@ $('span').click(function(event) {
     })
     event.stopPropagation()
 })
+
+// Keypress on textbox
+$('input[type="text"]').keypress(function(event) {
+    
+    if (event.which === 13 ) {
+
+        // Grab new todo text from input
+        var todoText = ($(this).val());
+
+        $(this).val('')
+
+        // Create a new li and add to ul
+        $('ul').append('<li><span>X</span> ' + todoText + '</li>')
+        
+        
+    }
+})
